@@ -1,15 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
       fontFamily: {
         cursive: ['"Great Vibes"', 'cursive'],
-      },
-      colors: {
-        'custom-red': '#FF0000', // You can adjust this hex value
+        serif: ['"DM Serif Display"', 'serif'],
+        sans: ['ui-sans-serif', 'system-ui'],
       },
     },
   },

@@ -2,6 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-/* globals.css */
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
+/* Background for the entire page */
+body {
+  background-image: url('/background/moss.jpg');
+  background-size: 120%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: brightness(0.9) contrast(1.1);
+  min-height: 100vh;
+}
+
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital,wght@0,400;1,400&family=Great+Vibes&display=swap');
+
+  footer a {
+    color: #e6d4a3 !important;
+    text-decoration: none !important;
+    transition: color 0.2s;
+  }
+  footer a:hover, footer a:focus {
+    color: #d0d5af !important;
+    text-decoration: underline;
+  }
+  footer {
+
+    left: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+  }
+  
