@@ -12,25 +12,20 @@ const playfair = Playfair_Display({
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#24411b] border-t border-[#475a3a]">
-      <div className="max-w-7xl mx-auto flex flex-row items-center justify-between px-8 md:px-16 py-14">
-        {/* Logo/Brand left */}
-        <div className="flex-shrink-0">
-          <h1
-            className={`text-left text-[40px] md:text-[76px] tracking-wide drop-shadow-[2px_2px_1px_rgba(0,0,0,0.5)] select-none leading-none ${playfair.className}`}
-            style={{ color: '#e6d4a3', letterSpacing: '.04em' }}
-          >
-            <span className="mr-6">Lady</span>
-            <span className="text-[0.3em] align-top font-light italic px-8">of the</span>
-            <span className="ml-6">Shrooms</span>
-          </h1>
-        </div>
-        {/* Links right */}
-        <div className="flex items-center gap-12">
+    <footer className="relative left-1/2 right-1/2 w-screen -translate-x-1/2 bg-[#24411b] border-t border-[#475a3a]">
+      <div className="flex flex-row items-center justify-between py-14 px-0">
+        {/* LOGO: left side */}
+        <h1
+          className={`text-left text-[38px] md:text-[64px] font-bold tracking-wide ${playfair.className}`}
+          style={{ color: '#e6d4a3', margin: 0, padding: 0 }}
+        >
+          Lady <span className="text-[0.4em] font-light italic align-top px-4">of the</span> Shrooms
+        </h1>
+        {/* LINKS: right side */}
+        <div className="flex items-center gap-10">
           <Link
             href="/about"
-            className={`text-[28px] md:text-[36px] font-normal tracking-wide ${playfair.className} text-[#d6b85c] hover:text-[#e6d4a3] transition-all`}
-            style={{ lineHeight: 1.1 }}
+            className={`text-[24px] md:text-[32px] font-normal ${playfair.className} text-[#d6b85c] hover:text-[#e6d4a3] transition`}
           >
             About us
           </Link>
@@ -39,10 +34,9 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
-            className={`text-[28px] md:text-[36px] font-normal tracking-wide ${playfair.className} text-[#d6b85c] hover:text-[#e6d4a3] transition-all flex items-center`}
-            style={{ lineHeight: 1.1 }}
+            className={`text-[24px] md:text-[32px] font-normal ${playfair.className} text-[#d6b85c] hover:text-[#e6d4a3] transition flex items-center`}
           >
-            <FontAwesomeIcon icon={faInstagram} className="w-8 h-8 md:w-10 md:h-10" />
+            <FontAwesomeIcon icon={faInstagram} className="w-7 h-7 md:w-9 md:h-9" />
           </a>
         </div>
       </div>

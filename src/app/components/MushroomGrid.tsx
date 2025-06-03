@@ -5,6 +5,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
+
 const mushrooms = [
   { id: '1', src: 'mushroom/mushroom1.png'},
   { id: '2', src: 'mushroom/mushroom2.png'},
