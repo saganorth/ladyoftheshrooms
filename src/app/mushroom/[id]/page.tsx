@@ -21,62 +21,53 @@ export default function MushroomDetailPage() {
   className="min-h-screen flex flex-col items-center justify-center px-4 py-20"
   style={{
     backgroundImage: "url('/background/basket.png')",
-   backgroundSize: 'cover',
+    backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
-    filter: 'brightness(0.93) contrast(1.08)',
+    filter: 'brightness(0.94) contrast(1.05)',
   }}
-
 >
-  {/* Mushroom Image */}
-  <div className="z-10 mb-8">
+  {/* Svampbild */}
+  <div className="mb-8 z-10">
     <img
       src={mushroom.images[0]}
       alt={mushroom.name}
-      className="mx-auto w-56 h-56 md:w-72 md:h-72 object-contain rounded-2xl shadow-2xl border-4 border-[#e6d4a3]/70"
-      style={{ background: 'rgba(30, 50, 20, 0.12)' }}
+      className="mx-auto w-44 h-44 md:w-60 md:h-60 object-contain rounded-xl shadow-2xl"
+      style={{
+        background: 'rgba(255,255,255,0.06)',
+        boxShadow: '0 8px 32px 0 rgba(30,30,20,0.16)'
+      }}
     />
   </div>
 
-  {/* Card for Details */}
-  <section className="
-    relative z-20
-    max-w-lg w-full
-    bg-[#26341b]/70
-    border border-[#e6d4a3]/70
-    rounded-3xl
-    shadow-2xl
-    px-8 py-8
-    flex flex-col gap-5
-    items-center
-    backdrop-blur-xl
-  ">
-    <h1 className="text-3xl md:text-4xl font-bold text-[#e6d4a3] tracking-tight drop-shadow-lg">
+  {/* Svävande text och knappar */}
+  <section className="w-full max-w-lg flex flex-col items-center gap-5">
+    <h1 className="text-3xl md:text-4xl font-bold text-[#fffbe6] drop-shadow-[0_4px_16px_rgba(0,0,0,0.36)] text-center">
       {mushroom.name}
     </h1>
-    <div className="text-base md:text-lg text-[#f1e9d0] text-center">
+    <div className="text-base md:text-lg text-[#fffbe6] text-center px-4 py-2 rounded-2xl bg-[#222]/50 shadow-md backdrop-blur-sm">
       {mushroom.description}
     </div>
-
-    <div className="mt-4 flex gap-4">
+    <div className="flex gap-4 mt-4">
       <a
         href="https://www.instagram.com/ladyoftheshrooms"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 bg-[#e6d4a3] text-[#24411b] px-5 py-2 rounded-lg font-semibold hover:bg-[#d6b85c] transition"
+        className="inline-flex items-center gap-2 bg-[#fffbe6]/90 text-[#28421c] px-6 py-2 rounded-full font-semibold shadow hover:bg-[#f1c75b]/90 hover:text-[#222] transition-all"
       >
         Instagram
       </a>
       <button
         onClick={() => router.back()}
-        className="inline-flex items-center gap-2 border border-[#e6d4a3] text-[#e6d4a3] px-5 py-2 rounded-lg font-semibold hover:bg-[#2c5130] transition"
+        className="inline-flex items-center gap-2 border border-[#fffbe6] text-[#fffbe6] px-6 py-2 rounded-full font-semibold hover:bg-[#24411b]/80 hover:text-[#fffbe6] transition-all"
       >
         ← Tillbaka
       </button>
     </div>
   </section>
 </main>
+
 
   );
 }

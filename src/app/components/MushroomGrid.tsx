@@ -12,7 +12,6 @@ const mushrooms = [
   { id: '3', src: 'mushroom/mushroom3.png'},
   { id: '4', src: 'mushroom/mushroom4.png'},
   { id: '5', src: 'mushroom/mushroom5.png'},
-  { id: '6', src: 'mushroom/mushroom6.png'},
   { id: '7', src: 'mushroom/mushroom7.png'},
 ];
 

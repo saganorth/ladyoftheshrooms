@@ -1,9 +1,9 @@
 'use client';
-
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { Playfair_Display } from 'next/font/google';
+
 
 const playfair = Playfair_Display({ 
   subsets: ['latin'],
@@ -12,31 +12,30 @@ const playfair = Playfair_Display({
 
 export default function Footer() {
   return (
-    <footer className="relative left-1/2 right-1/2 w-screen -translate-x-1/2 bg-[#24411b] border-t border-[#475a3a]">
-      <div className="flex flex-row items-center justify-between py-14 px-0">
-        {/* LOGO: left side */}
-        <h1
-          className={`text-left text-[38px] md:text-[64px] font-bold tracking-wide ${playfair.className}`}
-          style={{ color: '#e6d4a3', margin: 0, padding: 0 }}
-        >
-          Lady <span className="text-[0.4em] font-light italic align-top px-4">of the</span> Shrooms
-        </h1>
-        {/* LINKS: right side */}
-        <div className="flex items-center gap-10">
-          <Link
+    <footer className="w-full bg-[#24411b] py-15 px-24 min-h-[300px]">
+      <div className="flex items-center justify-between w-full h-full px-4 md:px-8 lg:px-12">
+        <div className="flex items-center space-x-4">
+          <span className={`text-[2em] mr-10 font-bold text-[#e6d4a3] ${playfair.className}`}>
+        Lady <span className="text-7xl md:text-5xl align-top font-light italic mx-2">of the</span> Shrooms
+          </span>
+        </div>
+        
+       
+        <div className="flex items-center gap-16">
+            <Link
             href="/about"
-            className={`text-[24px] md:text-[32px] font-normal ${playfair.className} text-[#d6b85c] hover:text-[#e6d4a3] transition`}
-          >
+            className="text-6xl md:text-7xl font-medium text-[#e6d4a3] hover:text-[#f0e5b8] transition-all duration-300 no-underline"
+            >
             About us
-          </Link>
+            </Link>
+            
           <a
             href="https://www.instagram.com/ladyoftheshrooms"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Instagram"
-            className={`text-[24px] md:text-[32px] font-normal ${playfair.className} text-[#d6b85c] hover:text-[#e6d4a3] transition flex items-center`}
+            className="text-[#e6d4a3] hover:text-[#f0e5b8] transition-all duration-300"
           >
-            <FontAwesomeIcon icon={faInstagram} className="w-7 h-7 md:w-9 md:h-9" />
+            <FontAwesomeIcon icon={faInstagram} className="w-20 h-20 md:w-24 md:h-24" />
           </a>
         </div>
       </div>
