@@ -8,47 +8,38 @@ const playfair = Playfair_Display({ subsets: ['latin'], weight: ['400','500','60
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1d3b1a] text-[#e6d4a3] mt-auto pt-14 pb-10 ">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
-        {/* Top row: always horizontal */}
-  <div className="flex items-start justify-between gap-6 md:gap-10">
-          {/* Brand */}
-      <div className="pl-1 md:pl-2 flex-shrink-0">
-            <h3
-        className={`text-[40px] md:text-[50px] xl:text-[54px] font-semibold tracking-wide leading-none ${playfair.className}`}
+    <footer className="bg-[#1d3b1a] text-[#e6d4a3] mt-auto pt-12 pb-8">
+      <div className="max-w-5xl mx-auto px-5 md:px-8">
+        <div className="flex flex-col items-center">
+          <h2 className={`text-[40px] md:text-[54px] font-semibold tracking-wide leading-none mb-6 text-center ${playfair.className}`}>
+            <span className="mr-4">Lady</span>
+            <span className="text-[0.34em] align-middle font-light italic mx-10">of the</span>
+            <span className="ml-4">Shrooms</span>
+          </h2>
+          <nav aria-label="Footer navigation" className="mb-6">
+            <ul className="flex flex-col items-center space-y-2 text-base md:text-lg font-medium list-none m-0 p-0">
+              <li>
+                <Link href="/" className="no-underline text-[#e6d4a3]  hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#e6d4a3]/40 rounded-sm px-1">Home</Link>
+              </li>
+              <li>
+                <Link href="/about" className="no-underline text-[#e6d4a3]  hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#e6d4a3]/40 rounded-sm px-1">About</Link>
+              </li>
+            </ul>
+          </nav>
+            <div className="flex justify-center gap-6 text-2xl mb-8">
+            <a
+              href="https://instagram.com/ladyoftheshrooms"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="no-underline text-[#e6d4a3] transition-transform hover:scale-110"
             >
-      <span className="text-[1em] mr-6 md:mr-8">Lady</span>
-      <span className="text-[0.32em] align-[0.28em] font-light italic px-10 md:px-14">of the </span>
-      <span className="text-[1em] ml-6 md:ml-8">Shrooms</span>
-            </h3>
-           
-          </div>
-          {/* Links */}
-      <div className="flex-1 flex items-start justify-end pr-1 md:pr-2">
-            <div className="flex flex-col items-end">
-                <nav>
-        <div className="flex flex-col space-y-2 text-base md:text-lg font-medium text-right md:space-y-3">
-                  <Link href="/" className="transition-colors hover:text-white">Home</Link>
-                  <Link href="/about" className="transition-colors hover:text-white">About</Link>
-                </div>
-                </nav>
-              <div className="mt-4 flex justify-end gap-5 text-xl md:text-2xl">
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram"
-                  className="transition-transform hover:scale-110"
-                >
-                  <FontAwesomeIcon icon={faInstagram} />
-                </a>
-              </div>
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
             </div>
+          <div className="text-center text-[11px] md:text-xs tracking-wide opacity-90">
+            © {new Date().getFullYear()} Lady of the Shrooms
           </div>
-        </div>
-        {/* Bottom line */}
-        <div className="text-center text-[11px] md:text-xs tracking-wide mt-12 pt-6">
-          © {new Date().getFullYear()} Lady of the Shrooms
         </div>
       </div>
     </footer>

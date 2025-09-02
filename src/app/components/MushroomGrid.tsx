@@ -14,16 +14,11 @@ const mushrooms = [
 ];
 
 function getLinePosition(index: number, total: number) {
-  const baseLeft = (index / (total - 1)) * 70 + 15; // Distribute across 70% of width, with 15% padding
-  const verticalVariation = Math.sin(index * 1.5) * 15; // Create wavy pattern
-  const scale = 0.8 + Math.random() * 0.4; 
-  const rotate = Math.floor(Math.random() * 20) - 10; 
-  return { 
-    top: 40 + verticalVariation,
-    left: baseLeft,
-    scale, 
-    rotate 
-  };
+  const baseLeft = (index / (total - 1)) * 70 + 15;
+  const verticalVariation = Math.sin(index * 1.5) * 12; // slightly less wave
+  const scale = 0.7 + Math.random() * 0.25; // smaller overall
+  const rotate = Math.floor(Math.random() * 16) - 8; // reduce rotation
+  return { top: 42 + verticalVariation, left: baseLeft, scale, rotate };
 }
 
 export default function MushroomGrid() {
@@ -34,7 +29,7 @@ export default function MushroomGrid() {
   }, []);
 
   return (
-  <div className="relative w-full h-[calc(100vh-220px)] md:h-[calc(100vh-300px)] overflow-hidden">
+  <div className="relative w-full h-[calc(100vh-220px)] md:h-[calc(100vh-320px)] overflow-hidden">
       {mushrooms.map((mushroom, index) => {
         const position = positions[index] || { top: 40, left: 15 + (index / (mushrooms.length - 1)) * 70, scale: 1, rotate: 0 };
         return (
@@ -42,7 +37,7 @@ export default function MushroomGrid() {
             <motion.img
               src={mushroom.src}
               alt={`Mushroom ${index}`}
-              className="absolute max-w-[22vw] sm:max-w-[140px]"
+              className="absolute max-w-[20vw] sm:max-w-[120px] lg:max-w-[110px]"
               style={{
                 top: `${position.top}%`,
                 left: `${position.left}%`,
