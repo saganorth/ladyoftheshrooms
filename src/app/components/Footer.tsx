@@ -11,23 +11,23 @@ export default function Footer() {
     <footer className="bg-[#1d3b1a] text-[#e6d4a3] mt-auto pt-14 pb-10 ">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
         {/* Top row: always horizontal */}
-        <div className="flex items-start justify-between gap-8">
+  <div className="flex items-start justify-between gap-6 md:gap-10">
           {/* Brand */}
-          <div className="pl-2 md:pl-4 flex-shrink-0">
+      <div className="pl-1 md:pl-2 flex-shrink-0">
             <h3
-              className={`text-[40px] md:text-[54px] font-semibold tracking-wide leading-none ${playfair.className}`}
+        className={`text-[40px] md:text-[50px] xl:text-[54px] font-semibold tracking-wide leading-none ${playfair.className}`}
             >
-          <span className="text-[1.0em] mr-10">Lady</span>
-          <span className="text-[0.3em] align-[0.3em] font-light italic px-20">of the </span>
-          <span className="text-[1.0em] ml-12">Shrooms</span>
+      <span className="text-[1em] mr-6 md:mr-8">Lady</span>
+      <span className="text-[0.32em] align-[0.28em] font-light italic px-10 md:px-14">of the </span>
+      <span className="text-[1em] ml-6 md:ml-8">Shrooms</span>
             </h3>
            
           </div>
           {/* Links */}
-          <div className="flex-1 flex items-start justify-end pr-2 md:pr-4">
+      <div className="flex-1 flex items-start justify-end pr-1 md:pr-2">
             <div className="flex flex-col items-end">
                 <nav>
-                <div className="flex flex-col space-y-2 text-base md:text-lg font-medium text-right">
+        <div className="flex flex-col space-y-2 text-base md:text-lg font-medium text-right md:space-y-3">
                   <Link href="/" className="transition-colors hover:text-white">Home</Link>
                   <Link href="/about" className="transition-colors hover:text-white">About</Link>
                 </div>
