@@ -1,4 +1,3 @@
-
 'use client';
 import React from 'react';
 
@@ -7,12 +6,11 @@ import Link from 'next/link';
 
 
 const mushrooms = [
-  { id: '1', src: 'mushroom/mushroom1.png'},
-  { id: '2', src: 'mushroom/mushroom2.png'},
-  { id: '3', src: 'mushroom/mushroom3.png'},
-  { id: '4', src: 'mushroom/mushroom4.png'},
-  { id: '5', src: 'mushroom/mushroom5.png'},
-  { id: '7', src: 'mushroom/mushroom7.png'},
+  { id: '1', src: '/mushroom/mushroom1.png'},
+  { id: '2', src: '/mushroom/mushroom2.png'},
+  { id: '4', src: '/mushroom/mushroom4.png'},
+  { id: '5', src: '/mushroom/mushroom5.png'},
+  { id: '7', src: '/mushroom/mushroom7.png'},
 ];
 
 function getLinePosition(index: number, total: number) {
@@ -49,7 +47,7 @@ export default function MushroomGrid() {
                 top: `${position.top}%`,
                 left: `${position.left}%`,
                 transform: `scale(${position.scale}) rotate(${position.rotate}deg)`,
-                maxWidth: '150px', // Increased from 100px to 150px
+                maxWidth: '150px', 
               }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

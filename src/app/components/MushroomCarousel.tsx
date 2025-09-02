@@ -28,7 +28,7 @@ export default function MushroomCarousel({ images, altBase, className = '' }: Mu
           transition={{ duration: 0.4 }}
         />
       </AnimatePresence>
-      {/* Carousel Controls */}
+      ´
       {images.length > 1 && (
         <>
           <button

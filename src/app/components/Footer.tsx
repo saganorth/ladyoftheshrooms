@@ -1,42 +1,54 @@
-'use client';
+"use client";
 import Link from 'next/link';
+import { Playfair_Display } from 'next/font/google';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { Playfair_Display } from 'next/font/google';
 
-const playfair = Playfair_Display({ 
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
-});
+const playfair = Playfair_Display({ subsets: ['latin'], weight: ['400','500','600','700'] });
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#24411b] py-40 px-48 min-h-[500px]">
-      <div className="flex items-center justify-between w-full h-full">
-        {/* Left side - Title */}
-        <div className="flex items-center">
-          <span className={`text-5xl md:text-6xl font-bold text-[#e6d4a3] ${playfair.className}`}>
-            Lady <span className="text-3xl md:text-4xl align-top font-light italic mx-2">of the</span> Shrooms
-          </span>
+    <footer className="bg-[#1d3b1a] text-[#e6d4a3] mt-auto pt-14 pb-10 ">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+        {/* Top row: always horizontal */}
+        <div className="flex items-start justify-between gap-8">
+          {/* Brand */}
+          <div className="pl-2 md:pl-4 flex-shrink-0">
+            <h3
+              className={`text-[40px] md:text-[54px] font-semibold tracking-wide leading-none ${playfair.className}`}
+            >
+          <span className="text-[1.0em] mr-10">Lady</span>
+          <span className="text-[0.3em] align-[0.3em] font-light italic px-20">of the </span>
+          <span className="text-[1.0em] ml-12">Shrooms</span>
+            </h3>
+           
+          </div>
+          {/* Links */}
+          <div className="flex-1 flex items-start justify-end pr-2 md:pr-4">
+            <div className="flex flex-col items-end">
+                <nav>
+                <div className="flex flex-col space-y-2 text-base md:text-lg font-medium text-right">
+                  <Link href="/" className="transition-colors hover:text-white">Home</Link>
+                  <Link href="/about" className="transition-colors hover:text-white">About</Link>
+                </div>
+                </nav>
+              <div className="mt-4 flex justify-end gap-5 text-xl md:text-2xl">
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="transition-transform hover:scale-110"
+                >
+                  <FontAwesomeIcon icon={faInstagram} />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        {/* Right side - Navigation */}
-        <div className="flex items-center gap-32">
-          <Link
-            href="/about"
-            className="text-7xl md:text-8xl font-medium text-[#e6d4a3] hover:text-[#f0e5b8] transition-all duration-300 no-underline"
-          >
-            About us
-          </Link>
-          
-          <a
-            href="https://www.instagram.com/ladyoftheshrooms"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#e6d4a3] hover:text-[#f0e5b8] transition-all duration-300"
-          >
-            <FontAwesomeIcon icon={faInstagram} className="w-32 h-32 md:w-36 md:h-36" />
-          </a>
+        {/* Bottom line */}
+        <div className="text-center text-[11px] md:text-xs tracking-wide mt-12 pt-6">
+          © {new Date().getFullYear()} Lady of the Shrooms
         </div>
       </div>
     </footer>
