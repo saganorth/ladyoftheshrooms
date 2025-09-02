@@ -34,7 +34,7 @@ export default function MushroomGrid() {
   }, []);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+  <div className="relative w-full h-[calc(100vh-220px)] md:h-[calc(100vh-300px)] overflow-hidden">
       {mushrooms.map((mushroom, index) => {
         const position = positions[index] || { top: 40, left: 15 + (index / (mushrooms.length - 1)) * 70, scale: 1, rotate: 0 };
         return (
@@ -42,12 +42,12 @@ export default function MushroomGrid() {
             <motion.img
               src={mushroom.src}
               alt={`Mushroom ${index}`}
-              className="absolute"
+              className="absolute max-w-[22vw] sm:max-w-[140px]"
               style={{
                 top: `${position.top}%`,
                 left: `${position.left}%`,
                 transform: `scale(${position.scale}) rotate(${position.rotate}deg)`,
-                maxWidth: '150px', 
+                width: '100%',
               }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

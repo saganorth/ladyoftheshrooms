@@ -7,7 +7,7 @@ export default function AboutPage() {
 
   return (
     <main
-      className="min-h-screen flex flex-col items-center justify-center px-8 py-24"
+      className="min-h-screen flex flex-col items-center justify-start px-4 sm:px-6 pt-28 md:pt-36 pb-20"
       style={{
         background: 'linear-gradient(to bottom, #f7f4eb, #e8e3d5)',
         color: '#4a4a3a'
@@ -15,7 +15,7 @@ export default function AboutPage() {
     >
 
         <section 
-          className="max-w-lg flex flex-col items-center gap-8 relative p-10 mt-6 md:mt-4 rounded-3xl z-10"
+          className="max-w-md w-full flex flex-col items-center gap-6 relative px-6 py-8 sm:px-8 sm:py-10 mt-4 md:mt-6 rounded-3xl z-10"
           style={{
             border: '3px solid #e6d4a3',
             background: 'linear-gradient(145deg, #fff6e6, #f8f4e8)',

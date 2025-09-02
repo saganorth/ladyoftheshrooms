@@ -6,15 +6,15 @@ const playfair = Playfair_Display({ subsets: ['latin'] });
 
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 w-full h-40 z-50 flex items-center justify-center pb-8">
-      <a href="/" className="no-underline">
+    <header className="w-full flex items-center justify-center py-6 md:py-8">
+      <a href="/" className="no-underline block px-4">
         <h1
-          className={`text-center text-[64px] md:text-[80px] text-yellow-100 tracking-wide drop-shadow-[2px_2px_1px_rgba(0,0,0,0.5)] select-none leading-none ${playfair.className}`}
+          className={`text-center text-[40px] xs:text-[48px] md:text-[72px] tracking-wide select-none leading-none ${playfair.className}`}
           style={{ color: '#e6d4a3' }}
         >
-          <span className="text-[1.9em] mr-10">Lady</span>
-          <span className="text-[0.5em] align-[0.3em] font-light italic px-20">of the</span>
-          <span className="text-[1.9em] ml-12">Shrooms</span>
+          <span className="inline-block mr-3 md:mr-6">Lady</span>
+          <span className="inline-block text-[0.45em] md:text-[0.5em] font-light italic mx-4 md:mx-10 align-middle">of the</span>
+          <span className="inline-block ml-3 md:ml-6">Shrooms</span>
         </h1>
       </a>
     </header>
