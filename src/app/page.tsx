@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <main className="min-h-screen"
+      <main className="min-h-screen pt-8 md:pt-12 pb-10"
         style={{
           backgroundImage: "url('/background/moss.jpg')",
           backgroundSize: 'cover',
@@ -17,9 +17,9 @@ export default function HomePage() {
           backgroundAttachment: 'fixed',
           filter: 'brightness(0.94) contrast(1.05)',
         }}>
-  
-  
-        <MushroomGrid />
+        <div className="max-w-6xl mx-auto w-full px-4 sm:px-6 relative">
+          <MushroomGrid />
+        </div>
      
       </main>
     </>

@@ -29,7 +29,7 @@ export default function MushroomGrid() {
   }, []);
 
   return (
-  <div className="relative w-full h-[calc(100vh-220px)] md:h-[calc(100vh-320px)] overflow-hidden">
+  <div className="relative w-full h-[calc(100vh-260px)] md:h-[calc(100vh-360px)] overflow-hidden pt-4 md:pt-6">
       {mushrooms.map((mushroom, index) => {
         const position = positions[index] || { top: 40, left: 15 + (index / (mushrooms.length - 1)) * 70, scale: 1, rotate: 0 };
         return (
