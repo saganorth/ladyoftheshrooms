@@ -15,9 +15,9 @@ const mushrooms = [
 
 function getLinePosition(index: number, total: number) {
   const baseLeft = (index / (total - 1)) * 70 + 15;
-  const verticalVariation = Math.sin(index * 1.5) * 12; // slightly less wave
-  const scale = 0.7 + Math.random() * 0.25; // smaller overall
-  const rotate = Math.floor(Math.random() * 16) - 8; // reduce rotation
+  const verticalVariation = Math.sin(index * 1.5) * 12; 
+  const scale = 0.7 + Math.random() * 0.20; 
+  const rotate = Math.floor(Math.random() * 16) - 8; 
   return { top: 42 + verticalVariation, left: baseLeft, scale, rotate };
 }
 
