@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export default function AboutPage() {
     const instagramButtonClass = "inline-flex items-center gap-2 text-brand-accent hover:text-white bg-white hover:bg-brand-gold border border-brand-gold/60 px-5 py-2.5 transition-colors rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-gold/40";
     return (
+        <>
         <main className="min-h-screen w-full flex flex-col items-center py-14 md:py-18 px-5 sm:px-8 bg-gradient-to-b from-brand-cream to-[#e8e3d5]">
             <div className="w-full max-w-2xl bg-white rounded-2xl shadow-md border border-brand-gold/30 p-8 sm:p-10 flex flex-col items-center gap-8">
                 <Image
@@ -38,5 +39,6 @@ export default function AboutPage() {
                 </a>
             </div>
         </main>
+        </>
     );
 }

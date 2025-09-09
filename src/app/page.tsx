@@ -2,13 +2,14 @@
 
 import MushroomGrid from '../app/components/MushroomGrid';
 
+
 export default function HomePage() {
 
 
   return (
     <>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <main className="min-h-screen pt-8 md:pt-12 pb-10"
+      <div className="min-h-screen pt-8 md:pt-12 pb-10"
         style={{
           backgroundImage: "url('/background/moss.jpg')",
           backgroundSize: 'cover',
@@ -21,7 +22,7 @@ export default function HomePage() {
           <MushroomGrid />
         </div>
      
-      </main>
+      </div>
     </>
   );
 }
