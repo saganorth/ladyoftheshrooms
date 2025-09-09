@@ -7,8 +7,7 @@ export default function HomePage() {
 
 
   return (
-    <>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
       <div className="min-h-screen pt-8 md:pt-12 pb-10"
         style={{
           backgroundImage: "url('/background/moss.jpg')",
@@ -23,6 +22,6 @@ export default function HomePage() {
         </div>
      
       </div>
-    </>
+    
   );
 }

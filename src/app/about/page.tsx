@@ -2,43 +2,58 @@
 import Image from 'next/image';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 export default function AboutPage() {
-    const instagramButtonClass = "inline-flex items-center gap-2 text-brand-accent hover:text-white bg-white hover:bg-brand-gold border border-brand-gold/60 px-5 py-2.5 transition-colors rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-gold/40";
     return (
-        <>
-        <main className="min-h-screen w-full flex flex-col items-center py-14 md:py-18 px-5 sm:px-8 bg-gradient-to-b from-brand-cream to-[#e8e3d5]">
-            <div className="w-full max-w-2xl bg-white rounded-2xl shadow-md border border-brand-gold/30 p-8 sm:p-10 flex flex-col items-center gap-8">
+        <div
+            className="min-h-screen flex items-center justify-center px-6 py-10"
+            style={{ backgroundColor: "#132612" }}
+        >
+            <div className="flex flex-col items-center max-w-md w-100 rounded-3xl border-4  p-6 sm:p-8 backdrop-blur-sm shadow-lg bg-brand-cream" style={{ borderColor: '#e6d4a3', backgroundColor: '#f7f4eb' }}>
                 <Image
                     src="/lady.jpeg"
                     alt="Portrait of Lady of the Shrooms"
                     width={140}
                     height={140}
-                    className="rounded-full border-4 border-brand-gold object-cover w-50 h-50"
+                    className="w-50 h-50 sm:w-50 sm:h-50 md:w-90 md:h-90 object-cover rounded-full border-4 border-brand-gold mb-6"
+                    style={{ borderColor: '#e6d4a3', backgroundColor: '#f7f4eb' }}
                     priority
                 />
-                <header className="text-center space-y-2">
-                    <p className="text-xs uppercase tracking-widest text-brand-accent/60">Est. 2024 • Hand‑crafted Myco Art</p>
-                </header>
-                <div className="space-y-5 text-center">
-                    <p className="text-sm sm:text-base leading-relaxed">
-                        Welcome to Lady of the Shrooms, where passion for mycology meets artisanal craftsmanship.
-                    </p>
-                    <p className="text-sm sm:text-base leading-relaxed">
-                        Founded in 2024, we create handmade sculptures inspired by the forest. Want to order or collaborate? Reach out via Instagram.
-                    </p>
-                </div>
-                <a
-                    href="https://www.instagram.com/ladyoftheshrooms"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={instagramButtonClass}
-                    aria-label="Instagram profile"
+                
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 text-center mb-2 p-2">
+                    Lady of the Shrooms
+                </h1>
+                
+                <p className="text-xs uppercase tracking-widest text-gray-600 mb-6">Est. 2024 • Hand‑crafted Myco Art</p>
+                
+                <p className="text-sm sm:text-base md:text-lg text-gray-800 text-center leading-relaxed mb-4">
+                    Welcome to Lady of the Shrooms, where passion for mycology meets artisanal craftsmanship.
+                </p>
+                
+                <p className="text-sm sm:text-base md:text-lg text-gray-800 text-center leading-relaxed mb-6">
+                    Founded in 2024, we create handmade sculptures inspired by the forest. Want to order or collaborate? Reach out via Instagram.
+                </p>
+
+                <div
+                    className="flex gap-4 p-4 rounded-full  bg-brand-cream/80"
                 >
-                    <FontAwesomeIcon icon={faInstagram} className="w-5 h-5" />
-                    <span className="font-medium">@ladyoftheshrooms</span>
-                </a>
+                    <a
+                        href="https://www.instagram.com/ladyoftheshrooms"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="transition-colors duration-300 p-2 text-brand-accent"
+                        aria-label="Instagram profile"
+                    >
+                        <FontAwesomeIcon icon={faInstagram} size="2x" />
+                    </a>
+                </div>
             </div>
-        </main>
-        </>
+        </div>
     );
 }
+
+
+
+
+
+   
