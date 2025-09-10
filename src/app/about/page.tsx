@@ -24,13 +24,13 @@ export default function AboutPage() {
                     Lady of the Shrooms
                 </h1>
                 
-                <p className="text-xs uppercase tracking-widest text-gray-600 mb-6">Est. 2024 • Hand‑crafted Myco Art</p>
+                <p className="text-base sm:text-xlg md:text-xl text-gray-700 mt-2 mb-4">Est. 2024 • Hand‑crafted Myco Art</p>
                 
-                <p className="text-sm sm:text-base md:text-lg text-gray-800 text-center leading-relaxed mb-4">
+                <p className="text-sm sm:text-base md:text-lg text-gray-800 text-center leading-relaxed mb-4 mx-2">
                     Welcome to Lady of the Shrooms, where passion for mycology meets artisanal craftsmanship.
                 </p>
                 
-                <p className="text-sm sm:text-base md:text-lg text-gray-800 text-center leading-relaxed mb-6">
+                <p className="text-sm sm:text-base md:text-lg text-gray-800 text-center leading-relaxed mb-6 mx-2">
                     Founded in 2024, we create handmade sculptures inspired by the forest. Want to order or collaborate? Reach out via Instagram.
                 </p>
 

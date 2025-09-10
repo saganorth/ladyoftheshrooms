@@ -8,14 +8,16 @@ const playfair = Playfair_Display({ subsets: ['latin'], weight: ['400','500','60
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1d3b1a] text-[#e6d4a3] mt-auto pt-12 pb-8">
-      <div className="max-w-5xl mx-auto px-5 md:px-8">
-        <div className="flex flex-col items-center">
-          <h2 className={`text-center text-[32px] xs:text-[40px] md:text-[70px] tracking-wide select-none leading-tight px-1 md:px-2 ${playfair.className}`}>
-            <span className="mr-4">Lady</span>
-            <span className="text-[0.34em] align-middle font-light italic mx-10">of the</span>
-            <span className="ml-4">Shrooms</span>
-          </h2>
+    <footer className="bg-[#1d3b1a] text-[#e6d4a3] mt-auto pt-12 pb-8 w-full">
+      <div className="w-full flex justify-center">
+        <div className="flex flex-col items-center text-center px-5 md:px-8">
+            <h2 className={`text-center text-[32px] xs:text-[40px] md:text-[70px] tracking-wide select-none leading-tight px-1 md:px-2 ${playfair.className}`}>
+            <Link href="/" className="no-underline text-[#e6d4a3] hover:opacity-90">
+              <span className="mr-4">Lady</span>
+              <span className="text-[0.34em] align-middle font-light italic mx-10">of the</span>
+              <span className="ml-4">Shrooms</span>
+            </Link>
+            </h2>
           <nav aria-label="Footer navigation" className="mb-6">
             <ul className="flex flex-col items-center space-y-2 text-base md:text-lg font-medium list-none m-0 p-0">
               <li>
